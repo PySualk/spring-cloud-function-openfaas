@@ -1,0 +1,10 @@
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+functions:
+  spring-cloud-fn:
+    lang: dockerfile
+    handler: ./function
+    image: spring-cloud-fn:latest
+    environment:
+      server_port: "8082"
